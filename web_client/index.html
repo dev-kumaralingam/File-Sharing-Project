@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Sharing Client</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="main-container" style="display: none;">
+        <h2>File Sharing Client</h2>
+        <div id="messages"></div>
+        <input type="text" id="messageInput" placeholder="Enter a message">
+        <button onclick="sendMessage()">Send Message</button>
+        <input type="file" id="fileInput">
+        <button onclick="sendFile()">Send File</button>
+        <button onclick="getOnlineUsers()">Get Online Users</button>
+        <div id="onlineUsers"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
